@@ -1,6 +1,13 @@
 {
     "configurations": [
         {
+            "type": "java",
+            "name": "BitonicArray",
+            "request": "launch",
+            "mainClass": "BitonicArray",
+            "projectName": "weekOne_ad6be1f1"
+        },
+        {
             "name": "(gdb) Launch",
             "type": "cppdbg",
             "request": "launch",
