@@ -6,8 +6,9 @@
             "command": "/usr/bin/g++",
             "args": [
                 "-fdiagnostics-color=always",
-                "-g",
+                
                 "${file}",
+                "${fileWorkspaceFolder}/include/*.cpp",
                 "-o",
                 "${fileDirname}/${fileBasenameNoExtension}"
             ],

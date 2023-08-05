@@ -54,26 +54,26 @@ int bitonic_search(int* arr, int size, int n){
 }
 
 
-int main(int argc, char const *argv[])
-{
-    int size = 16;
-    int n = 15;
-    int* Bitonicarr = new int[size]; 
-    for(int i = 0; i < size/2; i++){
-        Bitonicarr[i] = size/2 + i;
-        Bitonicarr[i + size/2] = size/2 - i - 1 ;
-    }
-    for (size_t i = 0; i < size; i++)
-    {
-        std::cout << " " << Bitonicarr[i];
-    }
+// int main(int argc, char const *argv[])
+// {
+//     int size = 16;
+//     int n = 15;
+//     int* Bitonicarr = new int[size]; 
+//     for(int i = 0; i < size/2; i++){
+//         Bitonicarr[i] = size/2 + i;
+//         Bitonicarr[i + size/2] = size/2 - i - 1 ;
+//     }
+//     for (size_t i = 0; i < size; i++)
+//     {
+//         std::cout << " " << Bitonicarr[i];
+//     }
     
 
     
-    std::cout << "\nindex of " <<  n <<  " is: " << bitonic_search(Bitonicarr, size, n) << std::endl;
+//     std::cout << "\nindex of " <<  n <<  " is: " << bitonic_search(Bitonicarr, size, n) << std::endl;
 
 
 
-    return 0;
-}
+//     return 0;
+// }
 

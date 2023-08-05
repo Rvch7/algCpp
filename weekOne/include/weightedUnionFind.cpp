@@ -18,12 +18,11 @@ WeightedUF::WeightedUF(int N):N(N){
 		size[i] = 1;
 	}
 }
+
+// WeightedUF::WeightedUF() {};
+
 bool WeightedUF::Find(int p,int q){
-	if(root(p) == root(q)){
-		return true;
-	}else{
-		return false;
-	}
+	return root(p) == root(q);
 }	
 
 void WeightedUF::Union(int p,int q){
@@ -38,10 +37,12 @@ void WeightedUF::Union(int p,int q){
 			id[rootq] = rootp;
 			size[rootq] = size[rootp] + size[rootq];
 		}
-		std::cout << p << " and " << q << " are union\n";
+		//std::cout << p << " and " << q << " are union\n";
 	}
 }
 
 WeightedUF::~WeightedUF(){
-	delete id;
+
+	//std::cout << "WeightedUF terminated..." << std::endl;
+	delete id,size;
 }

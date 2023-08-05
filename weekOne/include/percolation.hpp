@@ -1,16 +1,22 @@
+#pragma once
+
 #include <vector>
-#include "../weightedUnionFind.hpp"
-using Grid = std::vector<std::vector<int>>;
+#include <iostream>
+#include "weightedUnionFind.hpp"
+
+
+
 enum spot_status {full, open};
 
 class percolation{
 private:
-    int n;
-    Grid spots;
-    int openSpots;
+    WeightedUF uf;
+    int numofSpots;
+    int openSpots = 0;
+    bool* status;
     int virTop;
     int virBot;
-    WeightedUF wuf;
+    
 
 public:
     percolation(int n);
@@ -19,5 +25,10 @@ public:
     bool isFull(int r, int c);
     int numberOfOpenSites();
     bool percolates();
+    int getOpenSpots();
+
+    bool is_valid_index(int r, int c);
+
+    ~percolation();
 
 };
